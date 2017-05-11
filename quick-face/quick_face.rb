@@ -8,35 +8,50 @@ def item_xml(options = {})
   ITEM
 end
 
+def output(items)
+  puts "<?xml version='1.0'?>\n<items>\n#{items}</items>"
+  exit
+end
+
 def match?(word, query)
   word.match(/#{query.gsub(/\\ /, '').split('').join('.*')}/i)
 end
 
-query = Regexp.escape(ARGV.first).delete(':')
+query = Regexp.escape(ARGV.first)
+paths = File.read('paths').split("\n")
 
-images_folders = [
-  '/users/xin/pictures/goddess',
-  '/users/xin/pictures/expressions'
-]
+if paths.size == 0
+  output(item_xml({
+    arg: nil,
+    uid: nil,
+    title: 'Please add image paths for searching',
+    subtitle: 'there aren\'t paths to search expressions, please use the add command',
+    path: nil
+  }))
+end
 
-images_path = images_folders.inject([]) do |paths, folder|
-  paths += Dir["#{folder}/**/*.jpg", "#{folder}/**/*.png"].keep_if do |path|
-    name = File.basename(path, '.*')
-    match?(name, query)
+files = paths.inject([]) do |files, path|
+  if File.file? path
+    files << path
+  else
+    files += Dir["#{path}/**/*.jpg", "#{path}/**/*.png"]
   end
 end
 
-items = images_path.uniq.sort.map do |path|
-  basename = File.basename(path)
+files.keep_if do |file|
+  name = File.basename(file, '.*')
+  match?(name, query)
+end
+
+items = files.uniq.sort.map do |file|
+  basename = File.basename(file)
   item_xml({
-    arg: path,
+    arg: file,
     uid: basename,
-    path: path,
+    path: file,
     title: basename,
-    subtitle: "Copy #{basename} to clipboard"
+    subtitle: file
   })
 end.join
 
-output = "<?xml version='1.0'?>\n<items>\n#{items}</items>"
-
-puts output
+output(items)
