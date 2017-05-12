@@ -18,7 +18,12 @@ def match?(word, query)
 end
 
 query = Regexp.escape(ARGV.first)
-paths = File.read('paths').split("\n")
+
+paths = if File.exists? 'paths'
+  File.read('paths').split("\n")
+else
+  []
+end
 
 if paths.size == 0
   output(item_xml({
