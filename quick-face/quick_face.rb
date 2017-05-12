@@ -3,7 +3,7 @@ def item_xml(options = {})
   <item arg="#{options[:arg]}" uid="#{options[:uid]}">
     <title>#{options[:title]}</title>
     <subtitle>#{options[:subtitle]}</subtitle>
-    <icon>#{options[:path]}</icon>
+    <icon>#{options[:icon]}</icon>
   </item>
   ITEM
 end
@@ -27,11 +27,8 @@ end
 
 if paths.size == 0
   output(item_xml({
-    arg: nil,
-    uid: nil,
-    title: 'Please add image paths for searching',
-    subtitle: 'there aren\'t paths to search expressions, please use the add command',
-    path: nil
+    title: 'face-add example-fodlers-or-images',
+    subtitle: 'Please add image paths for searching'
   }))
 end
 
@@ -39,21 +36,18 @@ files = paths.inject([]) do |files, path|
   if File.file? path
     files << path
   else
-    files += Dir["#{path}/**/*.jpg", "#{path}/**/*.png"]
+    files += Dir["#{path}/**/*.jpg", "#{path}/**/*.jpeg", "#{path}/**/*.png", "#{path}/**/*.gif"]
   end
 end
 
-files.keep_if do |file|
-  name = File.basename(file, '.*')
-  match?(name, query)
-end
+files.keep_if { |file| match?(File.basename(file), query) }
 
 items = files.uniq.sort.map do |file|
   basename = File.basename(file)
   item_xml({
     arg: file,
     uid: basename,
-    path: file,
+    icon: file,
     title: basename,
     subtitle: file
   })
