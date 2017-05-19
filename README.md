@@ -17,3 +17,9 @@ Use the command on the top, it will list all the matching expressions accroding 
 Usage: `face-add example-folder-or-iamge-names`
 
 If you use this workflow for the first time, it's necessary for you to add some images paths, it's a file-filter which built in by workflow, choose folders or image files, after that you can search them. You can also modify the file named `paths` in the working directory directly.
+
+## iTerm.scpt
+
+When you are using the combination of "iTerm + oh-my-zsh + tmux", maybe you want to replace the alfred's default terminal with "iTerm", choose the custom option, and then copy the content of file named "iTerm.scpt".
+
+It's written by applescript, you can learn applescript's grammer and refer to the [document of "iTerm"](http://www.iterm2.com/documentation-scripting.html)
