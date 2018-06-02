@@ -23,3 +23,43 @@ If you use this workflow for the first time, it's necessary for you to add some 
 When you are using the combination of "iTerm + oh-my-zsh + tmux", maybe you want to replace the alfred's default terminal with "iTerm", choose the custom option, and then copy the content of file named "iTerm.scpt".
 
 It's written by applescript, you can learn applescript's grammer and refer to the [document of "iTerm"](http://www.iterm2.com/documentation-scripting.html)
+
+## Youdao Translator
+
+> Use youdao api to translate
+
+### Prepare
+
+If you want to use this workflow to transalte quickly, you should register and apply for a service at youdao, [http://ai.youdao.com/index.s](http://ai.youdao.com/index.s), and then copy `config.template.json` to `config.json`, modify with your own `appKey`、`secretKey`.
+
+### Usage
+
+`yd hello` or `tr hello`
+
+Choose the item which you want, click `enter` to copy to your clipboard.
+
+## Launcher
+
+> Open some files by certain program in alfred
+
+Alfred provides a `open` command to open different files by macos softwares, such as use `Finder` to open folder and files, or `Preview` to open pdf.
+
+But sometimes we want to open by certain programs, this workflow may help you.
+
+In fact, it is achieved by a `file filter` and single shell command.
+
+### Vimpdf
+
+`vimpdf example.pdf`
+
+Preview pdf files in vim mode, you should download the executable program named `Cocoa-mupdf`, you can find it in [https://github.com/dean-wong/Cocoa-mupdf](https://github.com/dean-wong/Cocoa-mupdf).
+
+### SublimeText
+
+`st alfred-workflows`
+
+Open project in sublime text by alfred, at first, you should install sublime text on your machine, and then it will provide a command line `subl`, you can use it in a terminal. I just move it into a workflow.
+
+
+
+
