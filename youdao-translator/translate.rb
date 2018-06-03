@@ -55,5 +55,5 @@ rescue Exception => e
   output(
     title: 'Something was wrong',
     subtitle: e
-  )
+  ) unless e.is_a? SystemExit
 end

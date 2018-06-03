@@ -1,6 +1,8 @@
 def item_xml(options = {})
+  arg = options[:arg] || options[:title]
+  arg = arg.join(';') if arg.is_a? Array
   <<-ITEM
-  <item arg="#{options[:arg] || options[:title]}" uid="#{options[:uid]}">
+  <item arg="#{arg}" uid="#{options[:uid]}">
     <title>#{options[:title]}</title>
     <subtitle>#{options[:subtitle]}</subtitle>
     <icon>#{options[:icon]}</icon>
