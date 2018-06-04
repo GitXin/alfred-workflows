@@ -1,6 +1,20 @@
-# Alfred WorkFlows
+# Alfred Workflows
 
 There are some workflows for alfred written by myself, in order to improve the work efficiency, for fun at the same time.
+
+# Initialize
+
+You can download them from directory `workflows`, double click the workflow then it will be imported into alfred automatically.
+
+In the meanwhile, you can execute the shell script named `initialize.sh`, it will create some soft links into the alfred project, and all workflows can be used immediately.
+
+```shell
+./initialize.sh
+```
+
+I recommend the second way, because you can not only use the workflow, but also manage your code if you want to modify them.
+
+# Workflow List
 
 ## Quick Face
 
@@ -60,6 +74,6 @@ Preview pdf files in vim mode, you should download the executable program named 
 
 Open project in sublime text by alfred, at first, you should install sublime text on your machine, and then it will provide a command line `subl`, you can use it in a terminal. I just move it into a workflow.
 
+`sta alfred-workflows`
 
-
-
+Append file/folder to current sublime text window.
