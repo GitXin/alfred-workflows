@@ -77,3 +77,9 @@ Open project in sublime text by alfred, at first, you should install sublime tex
 `sta alfred-workflows`
 
 Append file/folder to current sublime text window.
+
+### VSCode
+
+`code alfred-workflows`
+
+Open project in vscode by alfred, install vscode, and `command + shift + p` execute `Install 'code' command in path`, then you can use this command in your terminal, but use it through alfred will be more speedy.
