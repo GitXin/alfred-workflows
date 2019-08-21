@@ -83,3 +83,7 @@ Append file/folder to current sublime text window.
 `code alfred-workflows`
 
 Open project in vscode by alfred, install vscode, and `command + shift + p` execute `Install 'code' command in path`, then you can use this command in your terminal, but use it through alfred will be more speedy.
+
+### File Actions
+
+When you have a lot of files or directories with the same name, maybe you want to find it within certain path, you can type the excepted path in alfred, click `Right Arrow` to show `File Actions`, just choose them to run scripts with the path, such as `sublime text` which is provided by `Launcher`.

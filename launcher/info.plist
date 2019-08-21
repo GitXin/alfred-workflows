@@ -60,6 +60,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>FDD5DDA2-C183-4BCD-9305-97499ACB1491</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EDCF198B-EA0E-4FC7-BE54-831010BEFBF5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>xin</string>
@@ -266,6 +279,23 @@
 			<string>EDCF198B-EA0E-4FC7-BE54-831010BEFBF5</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>sublime text</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>FDD5DDA2-C183-4BCD-9305-97499ACB1491</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -478,7 +508,7 @@
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>560</integer>
 		</dict>
 		<key>55B8F0A5-5015-43CD-94B8-6D329B268595</key>
 		<dict>
@@ -492,35 +522,42 @@
 			<key>xpos</key>
 			<integer>260</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>300</integer>
 		</dict>
 		<key>5A4D8EDD-1E08-44A7-B293-6F41D658286A</key>
 		<dict>
 			<key>xpos</key>
 			<integer>510</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>170</integer>
 		</dict>
 		<key>891A8514-CB87-4101-B06D-FB8120F42B84</key>
 		<dict>
 			<key>xpos</key>
 			<integer>260</integer>
 			<key>ypos</key>
-			<integer>250</integer>
+			<integer>170</integer>
 		</dict>
 		<key>9F4F593C-FC24-4CC5-BC8A-1F662C412B6C</key>
 		<dict>
 			<key>xpos</key>
 			<integer>260</integer>
 			<key>ypos</key>
-			<integer>550</integer>
+			<integer>560</integer>
 		</dict>
 		<key>EDCF198B-EA0E-4FC7-BE54-831010BEFBF5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>510</integer>
+			<integer>500</integer>
 			<key>ypos</key>
-			<integer>400</integer>
+			<integer>360</integer>
+		</dict>
+		<key>FDD5DDA2-C183-4BCD-9305-97499ACB1491</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>430</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
